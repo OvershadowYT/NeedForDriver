@@ -385,7 +385,7 @@ class AICar(Entity):
 
             if not self.hitting_wall:
                 self.rotation_parent.look_at(self.position + self.y_ray.world_normal, axis = "up")
-                self.rotation_parent.rotate((0, self.rotation_y + 180, 0))
+                self.rotation_parent.rotation = ((0, self.rotation_y + 180, 0))
             else:
                 self.rotation_parent.rotation = self.rotation
         else:
