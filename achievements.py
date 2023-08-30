@@ -101,14 +101,6 @@ class RallyAchievements():
         create_achievement("Unlock Rally Car Orange!", car_achievements.rally_orange, icon = "confetti.png", ringtone = "unlock.mp3")
         create_achievement("Unlock Rally Car Black!", car_achievements.rally_black, icon = "confetti.png", ringtone = "unlock.mp3")
 
-        create_achievement("Beat Mandaw in Sand Track!", self.beat_mandaw_in_sand_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        create_achievement("Beat Mandaw in Grass Track!", self.beat_mandaw_in_grass_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        create_achievement("Beat Mandaw in Snow Track!", self.beat_mandaw_in_snow_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        create_achievement("Beat Mandaw in Forest Track!", self.beat_mandaw_in_forest_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        create_achievement("Beat Mandaw in Savannah Track!", self.beat_mandaw_in_savannah_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        create_achievement("Beat Mandaw in Lake Track!", self.beat_mandaw_in_lake_track, icon = "confetti.png", ringtone = "unlock.mp3")
-        
-        create_achievement("Beat Mandaw in Every Track!", self.beat_mandaw_in_everything, icon = "confetti.png", ringtone = "unlock.mp3")
 
         create_achievement("Unlock Grass Track!", self.unlock_grass_track, icon = "confetti.png", ringtone = "unlock.mp3")
         create_achievement("Unlock Snow Track!", self.unlock_snow_track, icon = "confetti.png", ringtone = "unlock.mp3")
@@ -122,6 +114,10 @@ class RallyAchievements():
 
     def race_against_ai(self):
         return self.car.ai_list[0].enabled
+        # Unlock Banana
+        self.car.banana_unlocked = True
+        self.car.save_unlocked()
+        return True
 
     def play_multiplayer(self):
         return self.car.multiplayer_update
@@ -137,6 +133,8 @@ class RallyAchievements():
             self.snow_track.unlocked and self.forest_track.unlocked and \
                 self.savannah_track.unlocked and self.lake_track.unlocked:
                 self.car.drift_unlocked = True
+                # Unlock Surfin Bird
+                self.car.surfinbird_unlocked = True
                 self.car.save_unlocked()
                 return True
 
@@ -195,76 +193,7 @@ class RallyAchievements():
                             self.car.save_unlocked()
                             return True
 
-    def beat_mandaw_in_sand_track(self):
-        if self.sand_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 13.09:
-                            self.car.beat_mandaw_sand_track = True
-                            self.car.save_unlocked()
-                            return True
 
-    def beat_mandaw_in_grass_track(self):
-        if self.grass_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 15.55:
-                            # Unlock Banana
-                            self.car.beat_mandaw_grass_track = True
-                            self.car.banana_unlocked = True
-                            self.car.save_unlocked()
-                            return True
-    
-    def beat_mandaw_in_snow_track(self):
-        if self.snow_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 27.41:
-                            self.car.beat_mandaw_snow_track = True
-                            self.car.save_unlocked()
-                            return True
-
-    def beat_mandaw_in_forest_track(self):
-        if self.forest_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 21.73:
-                            self.car.beat_mandaw_forest_track = True
-                            self.car.save_unlocked()
-                            return True
-
-    def beat_mandaw_in_savannah_track(self):
-        if self.savannah_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 12.31:
-                            self.car.beat_mandaw_savannah_track = True
-                            self.car.save_unlocked()
-                            return True
-
-    def beat_mandaw_in_lake_track(self):
-        if self.lake_track.enabled:
-            for menu in self.main_menu.menus:
-                if menu.enabled == False:
-                    if self.car.last_count != 0:
-                        if self.car.last_count <= 39.45:
-                            self.car.beat_mandaw_lake_track = True
-                            self.car.save_unlocked()
-                            return True
-
-    def beat_mandaw_in_everything(self):
-        if self.car.beat_mandaw_sand_track and self.car.beat_mandaw_grass_track \
-            and self.car.beat_mandaw_snow_track and self.car.beat_mandaw_forest_track \
-                and self.car.beat_mandaw_savannah_track and self.car.beat_mandaw_lake_track:
-                # Unlock Surfin Bird
-                self.car.surfinbird_unlocked = True
-                self.car.save_unlocked()
-                return True
 
 """
 Sand Track Achievements

@@ -217,12 +217,6 @@ class Car(Entity):
                 self.save_unlocked()
                 self.unlocked = json.load(u)
 
-        self.beat_mandaw_sand_track = False
-        self.beat_mandaw_grass_track = False
-        self.beat_mandaw_snow_track = False
-        self.beat_mandaw_forest_track = False
-        self.beat_mandaw_savannah_track = False
-        self.beat_mandaw_lake_track = False
 
         self.model_path = str(self.model).replace("render/scene/car/", "")
 
@@ -984,13 +978,6 @@ class Car(Entity):
         self.savannah_track.unlocked = self.unlocked["tracks"]["savannah_track"]
         self.lake_track.unlocked = self.unlocked["tracks"]["lake_track"]
 
-        self.beat_mandaw_sand_track = self.unlocked["beat_mandaw"]["sand_track"]
-        self.beat_mandaw_grass_track = self.unlocked["beat_mandaw"]["grass_track"]
-        self.beat_mandaw_snow_track = self.unlocked["beat_mandaw"]["snow_track"]
-        self.beat_mandaw_forest_track = self.unlocked["beat_mandaw"]["forest_track"]
-        self.beat_mandaw_savannah_track = self.unlocked["beat_mandaw"]["savannah_track"]
-        self.beat_mandaw_lake_track = self.unlocked["beat_mandaw"]["lake_track"]
-
         self.sports_unlocked = self.unlocked["cars"]["sports_car"]
         self.muscle_unlocked = self.unlocked["cars"]["muscle_car"]
         self.limo_unlocked = self.unlocked["cars"]["limo"]
@@ -1059,14 +1046,6 @@ class Car(Entity):
                 "forest_track": self.forest_track.unlocked,
                 "savannah_track": self.savannah_track.unlocked,
                 "lake_track": self.lake_track.unlocked
-            },
-            "beat_mandaw": {
-                "sand_track": self.beat_mandaw_sand_track,
-                "grass_track": self.beat_mandaw_grass_track,
-                "snow_track": self.beat_mandaw_snow_track,
-                "forest_track": self.beat_mandaw_forest_track,
-                "savannah_track": self.beat_mandaw_savannah_track,
-                "lake_track": self.beat_mandaw_lake_track
             },
             "cars": {
                 "sports_car": self.sports_unlocked,

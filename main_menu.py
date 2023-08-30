@@ -707,7 +707,7 @@ class MainMenu(Entity):
             unlocked_text.disable()
             if self.car.gamemode == "race":
                 highscore_text.enable()
-                highscore_text.text = "Highscore: " + str(round(self.car.sand_track_hs, 2)) + "\n Mandaw: 13.09"
+                highscore_text.text = "Highscore: " + str(round(self.car.sand_track_hs, 2))
 
         def grass_track_hover():
             for track in self.tracks:
@@ -739,7 +739,7 @@ class MainMenu(Entity):
             else:
                 if self.car.gamemode == "race":
                     highscore_text.enable()
-                    highscore_text.text = "Highscore: " + str(round(self.car.grass_track_hs, 2)) + "\n Mandaw: 15.55"
+                    highscore_text.text = "Highscore: " + str(round(self.car.grass_track_hs, 2))
                 unlocked_text.disable()
                 grass_track.alpha = 255
 
@@ -771,7 +771,7 @@ class MainMenu(Entity):
             else:
                 if self.car.gamemode == "race":
                     highscore_text.enable()
-                    highscore_text.text = "Highscore: " + str(round(self.car.snow_track_hs, 2)) + "\n Mandaw: 27.41"
+                    highscore_text.text = "Highscore: " + str(round(self.car.snow_track_hs, 2))
                 unlocked_text.disable()
                 snow_track.alpha = 255
         
@@ -803,7 +803,7 @@ class MainMenu(Entity):
             else:
                 if self.car.gamemode == "race":
                     highscore_text.enable()
-                    highscore_text.text = "Highscore: " + str(round(self.car.forest_track_hs, 2)) + "\n Mandaw: 21.73"
+                    highscore_text.text = "Highscore: " + str(round(self.car.forest_track_hs, 2))
                 unlocked_text.disable()
                 forest_track.alpha = 255
 
@@ -835,7 +835,7 @@ class MainMenu(Entity):
             else:
                 if self.car.gamemode == "race":
                     highscore_text.enable()
-                    highscore_text.text = "Highscore: " + str(round(self.car.savannah_track_hs, 2)) + "\n Mandaw: 12.31"
+                    highscore_text.text = "Highscore: " + str(round(self.car.savannah_track_hs, 2))
                 unlocked_text.disable()
                 savannah_track.alpha = 255
 
@@ -870,7 +870,7 @@ class MainMenu(Entity):
             else:
                 if self.car.gamemode == "race":
                     highscore_text.enable()
-                    highscore_text.text = "Highscore: " + str(round(self.car.lake_track_hs, 2)) + "\n Mandaw: 39.45"
+                    highscore_text.text = "Highscore: " + str(round(self.car.lake_track_hs, 2))
                 unlocked_text.disable()
                 lake_track.alpha = 255
 
@@ -1692,7 +1692,7 @@ class MainMenu(Entity):
                 car.viking_helmet.disable()
                 car.surfinbird.disable()
             else:
-                self.garage_locked_text("Beat Mandaw on Grass Track")
+                self.garage_locked_text("Play with AI")
 
         def surfinbird():
             if self.car.surfinbird_unlocked:
@@ -1703,7 +1703,7 @@ class MainMenu(Entity):
                 car.duck.disable()
                 car.banana.disable()
             else:
-                self.garage_locked_text("Beat Mandaw in Every Track")
+                self.garage_locked_text("Unlock Drift Gamemode")
 
         def viking_hover():
             self.garage_name_text.enable()
@@ -1753,7 +1753,7 @@ class MainMenu(Entity):
         self.garage_name_text = Text("Surfin Bird", scale = 1.5, color = color.white, line_height = 2, origin = 0, x = -0.5, y = -0.4, parent = self.garage_menu)
         self.garage_name_text.disable()
 
-        self.garage_unlocked_text = Text("Beat Mandaw in Every Track", scale = 1.5, color = color.orange, line_height = 2, origin = 0, y = 0.3, parent = self.garage_menu)
+        self.garage_unlocked_text = Text("Unlock Drift Gamemode", scale = 1.5, color = color.orange, line_height = 2, origin = 0, y = 0.3, parent = self.garage_menu)
         self.garage_unlocked_text.disable()
 
         garage_button.on_click = Func(garage_button_func)
