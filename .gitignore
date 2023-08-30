@@ -5,3 +5,5 @@ UrsinaAchievements/achievements.json
 *.pyc
 highscore/unlocked.json
 *.json
+__pycache__/achievements.cpython-311.pyc
+*.pyc
