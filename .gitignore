@@ -2,3 +2,6 @@
 highscore/highscore.json
 highscore/username.txt
 UrsinaAchievements/achievements.json
+*.pyc
+highscore/unlocked.json
+*.json
