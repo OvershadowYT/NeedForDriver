@@ -1,6 +1,6 @@
 from ursinanetworking import *
 
-print("\nHello from the Rally Server!\n")
+print("\nHello from the Need For Driver Server!\n")
 
 class Server:
     def __init__(self, ip, port):
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     from ursina import *
 
     app = Ursina()
-    window.title = "Rally"
+    window.title = "Need For Driver"
     window.borderless = False
 
     ip = InputField(default_value = "IP", limit_content_to = "0123456789.localhost", color = color.black, alpha = 100, y = 0.1, parent = camera.ui)
