@@ -1,30 +1,16 @@
-# Rally
+# Need For Driver
 
-A Simple 3D Racing Game Made In Python With The Ursina Engine
+Cars out there need you, driver! Will you help them regain their lost glory?
 
-Feel free to leave comments or feedback on how I can improve the game :)
+Feel free to leave comments or feedback on how I can improve the game.
 
 # Installation
 
-Download Rally on itch > https://mandaw2014.itch.io/rally
+Download Need For Driver on itch > 
 
 OR
 
 Code > Download Zip > Extract the Zip > Navigate to the folder in CMD or Terminal > Run:
-
-```
-pip install -r requirements.txt
-```
-
-NOTE: Make sure you have the github version of ursina since some things use the latest features
-
-And then run
-
-```
-python main.py
-```
-
-Then you're all set :)
 
 # Multiplayer
 
