@@ -45,6 +45,8 @@ Achievements Library by TheAssassin: [https://github.com/megat69/UrsinaAchieveme
 
 Networking Library by K3: [https://github.com/kstzl/UrsinaNetworking](https://github.com/kstzl/UrsinaNetworking)
 
+Open World Map: [https://www.cgtrader.com/free-3d-models/exterior/cityscape/city-big]
+
 
 Tusnad30: Shadows + Lighting
 
